@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+employe_one:
   name: MyString
   email: MyString
 
-two:
+employee_two:
   name: MyString
   email: MyString
