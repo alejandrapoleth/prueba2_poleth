@@ -7,8 +7,13 @@ class OperationTest < ActiveSupport::TestCase
 	end
 
 	test "Operation has Employee" do
-    skip "not yet"
-    #assert_not_nil task(:one).list 
+	skip "not yet"
+    assert_not_nil operation(:one).employee
     end
+
+    test 'deleting items on cascade' do
+	@operation.destroy
+	assert_empty Inventario.where(operation_id: @operation.id)
+	end
 
 end

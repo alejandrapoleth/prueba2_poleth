@@ -5,3 +5,5 @@ class InventarioTest < ActiveSupport::TestCase
 inventario = Inventario.new numserie:nil
 assert_not inventario.valid?
 end
+
+end

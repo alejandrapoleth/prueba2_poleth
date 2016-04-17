@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417154327) do
+ActiveRecord::Schema.define(version: 20160417155743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,12 @@ ActiveRecord::Schema.define(version: 20160417154327) do
     t.integer  "numserie"
     t.integer  "tamaño"
     t.text     "descripcion"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "operation_id"
   end
+
+  add_index "inventarios", ["operation_id"], name: "index_inventarios_on_operation_id", using: :btree
 
   create_table "operations", force: :cascade do |t|
     t.string   "title"
